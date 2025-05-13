@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
-    container: {
+    containerLogin: {
       flex: 1,
       justifyContent: 'center',
       padding: 20,
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
       fontSize: 18,
       textAlign: 'center',
     },
-    title: {
+    titleLogin: {
       fontSize: 24,
       marginBottom: 20,
       textAlign: 'center',

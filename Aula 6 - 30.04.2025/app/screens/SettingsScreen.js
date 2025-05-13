@@ -2,7 +2,8 @@
 import React, { useState } from 'react';
 import { View, Text,Switch, Button, Alert, Picker, Platform, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import styles from '../src/styles/SettingsScreenStyle';
+
+import getStyles from '../src/styles/SettingsScreenStyle';
 
 export default function SettingsScreen() {
     const [isNotificationsEnabled, setIsNotificationsEnabled] = useState(true);
@@ -10,6 +11,8 @@ export default function SettingsScreen() {
     const [theme, setTheme] = useState('light');
     const [language, setLanguage] = useState('pt');
     const navigation = useNavigation();
+
+    const styles = getStyles(theme);
 
     const toggleNotifications = () => {
         setIsNotificationsEnabled(previous => !previous);
@@ -31,8 +34,8 @@ export default function SettingsScreen() {
 
 
     return (
-        <View style={styles.container}>
-            <Text style={styles.title}>Configurações</Text>
+        <View style={styles.containerSettings}>
+            <Text style={styles.titleSettings}>Configurações</Text>
 
             {/* Notificações */}
             <View style={styles.settingItem}>
@@ -84,11 +87,7 @@ export default function SettingsScreen() {
             </View>
 
             {/* Sobre o app */}
-            <View style={styles.aboutContainer}>
-                <Text style={styles.aboutText}>Versão do App: 1.0.0</Text>
-                <Text style={styles.aboutText}>Desenvolvido por Raydson</Text>
-            </View>
+            
         </View>
     );
 }
-

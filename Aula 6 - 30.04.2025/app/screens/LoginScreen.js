@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image } from 'react-native';
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
-import styles from '../src/styles/LoginScreenStyle';
+import getStyles from '../src/styles/SettingsScreenStyle';
+import theme from './SettingsScreen';
 
 export default function LoginScreen() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const navigation = useNavigation();
+  const styles = getStyles(theme);
+
 
   useFocusEffect(
     React.useCallback(() => {
@@ -37,14 +40,14 @@ export default function LoginScreen() {
     navigation.navigate('ForgotSenha');
   };
   return (
-    <View style={styles.container}>
+    <View style={styles.containerLogin}>
       <View style={styles.bubbleContainer}>
         <View style={styles.bubble}>
           <Image source={require('../assets/logo.png')} resizeMode='contain' />
         </View>
       </View>
 
-      <Text style={styles.title}>bem-vindo!</Text>
+      <Text style={styles.titleLogin}>bem-vindo!</Text>
 
       <TextInput
         style={styles.input}

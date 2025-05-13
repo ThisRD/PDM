@@ -1,11 +1,14 @@
 //sreens/HomeScreen.js
 import React from 'react';
 import { View, Text, FlatList } from 'react-native';
-import styles from '../src/styles/HomeScreenStyle';
+import getStyles from '../src/styles/SettingsScreenStyle';
+import theme from './SettingsScreen';
+
+const styles = getStyles(theme);
 
 export default function HomeScreen() {
     return (
-        <View style={styles.container}>
+        <View style={styles.containerHome}>
             <Text>Home Screen</Text>
             <Text style={styles.header}>Notícias de Hoje</Text>
             <FlatList
