@@ -7,7 +7,7 @@ const HomeScreen = ({ navigation }) => {
             <Text style={styles.title}>Tela Inicial</Text>
             <Button
                 title="Ir para Detalhes"
-                onPress={() => navigation.navigate('Details')}
+                onPress={() => navigation.navigate('DetailsScreen')}
             />
         </View>
     );

@@ -1,7 +1,8 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import HomeScreen from '../screens/HomeScreen';
-import SettingsScreen from '../screens/SettingsScreen';
+import HomeScreen from '../telas/HomeScreen';
+import SettingsScreen from '../telas/SettingsScreen';
+// import ProfileScreen from '../telas/ProfileScreen';
 
 const Tab = createBottomTabNavigator();
 
